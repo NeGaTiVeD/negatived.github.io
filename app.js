@@ -2,6 +2,7 @@ let tg = window.Telegram.WebApp;
 tg.expand();
 
 let telegram_id = tg.initDataUnsafe.user.id;
+document.write(telegram_id);
 
 function click_button(){
 	console.log(123);
