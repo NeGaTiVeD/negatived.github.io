@@ -1,7 +1,6 @@
 let tg = window.Telegram.WebApp;
 tg.expand();
 
-document.write(tg.initData);
 let telegram_id = tg.initDataUnsafe.user.id;
 document.write(telegram_id);
 
@@ -21,7 +20,7 @@ function click_button(){
 	let damage = document.getElementById("damage").value;
 
 	if (city.length > 0 && address.length > 0 && mileage.length > 0 && fuel_card.length > 0) {
-		tg.sendData({
+		let data = {
 			telegram_id: telegram_id,
 			city: city,
 			address: address,
@@ -35,6 +34,7 @@ function click_button(){
 			wrench: wrench,
 			jack: jack,
 			damage: damage
-		})
+		};
+		tg.sendData(JSON.stringify(data));
 	}
 };
