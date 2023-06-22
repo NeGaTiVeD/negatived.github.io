@@ -17,6 +17,7 @@ function click_button(){
 
 	if (city.length > 0 && address.length > 0 && mileage.length > 0 && fuel_card.length > 0) {
 		let data = {
+			type: "act",
 			city: city,
 			address: address,
 			mileage: mileage,
