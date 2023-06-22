@@ -2,9 +2,9 @@ let tg = window.Telegram.WebApp;
 tg.expand();
 
 let telegram_id = tg.initDataUnsafe.user.id;
-let send_button = document.getElementById("send_button");
 
-send_button.addEventListener('click', function(){
+function click_button(){
+	console.log(123);
 	let city = document.getElementById("city").value;
 	let address = document.getElementById("address").value;
 	let mileage = document.getElementById("mileage").value;
@@ -35,4 +35,4 @@ send_button.addEventListener('click', function(){
 			damage: damage
 		})
 	}
-});
+};
