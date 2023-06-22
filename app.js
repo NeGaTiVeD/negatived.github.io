@@ -1,3 +1,3 @@
-var WebApp = window.Telegram.WebApp;
-
-WebApp.showAlert(`Добро пожаловать, @${WebApp.WebAppUser.username}.`);
+let tg = window.Telegram.WebApp;
+tg.expand();
+tg.showAlert(`Добро пожаловать, @${tg.WebAppUser.username}.`);
