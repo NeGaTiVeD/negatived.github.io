@@ -1,11 +1,7 @@
 let tg = window.Telegram.WebApp;
 tg.expand();
 
-let telegram_id = tg.initDataUnsafe.user.id;
-document.write(telegram_id);
-
 function click_button(){
-	console.log(123);
 	let city = document.getElementById("city").value;
 	let address = document.getElementById("address").value;
 	let mileage = document.getElementById("mileage").value;
@@ -21,7 +17,6 @@ function click_button(){
 
 	if (city.length > 0 && address.length > 0 && mileage.length > 0 && fuel_card.length > 0) {
 		let data = {
-			telegram_id: telegram_id,
 			city: city,
 			address: address,
 			mileage: mileage,
@@ -36,5 +31,6 @@ function click_button(){
 			damage: damage
 		};
 		tg.sendData(JSON.stringify(data));
+		tg.close();
 	}
 };
