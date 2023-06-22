@@ -1,6 +1,7 @@
 let tg = window.Telegram.WebApp;
 tg.expand();
 
+document.write(tg.initData);
 let telegram_id = tg.initDataUnsafe.user.id;
 document.write(telegram_id);
 
