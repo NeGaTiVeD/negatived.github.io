@@ -6,13 +6,13 @@ function click_button(){
 	let address = document.getElementById("address").value;
 	let mileage = document.getElementById("mileage").value;
 	let fuel_card = document.getElementById("fuel_card").value;
-	let stepney = document.getElementById("stepney").checked;
-	let medical = document.getElementById("medical").checked;
-	let extinguisher = document.getElementById("extinguisher").checked;
-	let emergency_sign = document.getElementById("emergency_sign").checked;
-	let vest = document.getElementById("vest").checked;
-	let wrench = document.getElementById("wrench").checked;
-	let jack = document.getElementById("jack").checked;
+	let stepney = document.getElementById("stepney").checked ? "Да" : "Нет";
+	let medical = document.getElementById("medical").checked ? "Да" : "Нет";
+	let extinguisher = document.getElementById("extinguisher").checked ? "Да" : "Нет";
+	let emergency_sign = document.getElementById("emergency_sign").checked ? "Да" : "Нет";
+	let vest = document.getElementById("vest").checked ? "Да" : "Нет";
+	let wrench = document.getElementById("wrench").checked ? "Да" : "Нет";
+	let jack = document.getElementById("jack").checked ? "Да" : "Нет";
 	let damage = document.getElementById("damage").value;
 
 	if (city.length > 0 && address.length > 0 && mileage.length > 0 && fuel_card.length > 0) {
